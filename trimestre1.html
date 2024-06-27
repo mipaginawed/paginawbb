@@ -192,74 +192,84 @@
  
     <div class="container">
         <section>
-            <img src="Imagenes/ph.png" alt="ejemplo" width="400" style="display: block; margin: 0 auto;">
-            <h2>1. Comprar un Plan de Hosting y un Dominio</h2>
+            <img src="Imagenes/ph.png" alt="GitHub Logo" width="400" style="display: block; margin: 0 auto;">
+            <h2>1. Crear una Cuenta en GitHub</h2>
             <p>
-                <strong>Elegir un Proveedor de Hosting:</strong> Selecciona un proveedor de hosting que se ajuste a tus necesidades (Ej. Bluehost, SiteGround, HostGator).<br>
-                <strong>Registrar un Dominio:</strong> Si no tienes un dominio, regístralo a través de tu proveedor de hosting o de un registrador de dominios.
+                <strong>Registrarse en GitHub:</strong> Visita <a href="https://github.com">github.com</a> y crea una cuenta si no tienes una.
             </p>
         </section>
         <section>
-            <h2>2. Configurar el Hosting</h2>
+            <h2>2. Crear un Nuevo Repositorio</h2>
             <p>
-                <strong>Acceso al Panel de Control:</strong> La mayoría de los proveedores de hosting ofrecen un panel de control (como cPanel) para gestionar tu cuenta.<br>
-                <strong>Crear una Cuenta FTP:</strong> Desde el panel de control, crea una cuenta FTP para subir tus archivos. FTP (File Transfer Protocol) es un método común para transferir archivos entre tu computadora y el servidor.
+                <strong>Iniciar Sesión:</strong> Inicia sesión en tu cuenta de GitHub.<br>
+                <strong>Nuevo Repositorio:</strong> Haz clic en el botón "New" para crear un nuevo repositorio.<br>
+                <strong>Configurar Repositorio:</strong> Dale un nombre a tu repositorio, añade una descripción opcional y elige si quieres que sea público o privado. Luego, haz clic en "Create repository".
             </p>
         </section>
         <section>
-            <h2>3. Preparar los Archivos de tu Sitio Web</h2>
+            <h2>3. Instalar Git en tu Computadora</h2>
             <p>
-                <strong>Revisar los Archivos:</strong> Asegúrate de que todos los archivos de tu sitio web estén listos para ser subidos, incluyendo HTML, CSS, JavaScript, imágenes y otros recursos.
+                <strong>Descargar Git:</strong> Visita <a href="https://git-scm.com">git-scm.com</a> y descarga la versión adecuada para tu sistema operativo.<br>
+                <strong>Instalar Git:</strong> Sigue las instrucciones de instalación para configurar Git en tu computadora.
             </p>
         </section>
         <section>
-            <h2>4. Subir los Archivos a través de FTP</h2>
+            <h2>4. Configurar Git</h2>
             <p>
-                <strong>Instalar un Cliente FTP:</strong> Programas como FileZilla, WinSCP o Cyberduck son populares para la transferencia de archivos por FTP.<br>
-                <strong>Conectar al Servidor FTP:</strong> Usa las credenciales de la cuenta FTP creada anteriormente para conectarte al servidor desde el cliente FTP.<br>
-                <strong>Subir los Archivos:</strong> Sube los archivos de tu sitio web al directorio público de tu servidor (usualmente llamado "public_html" o "www").
+                <strong>Configurar Usuario:</strong> Abre la terminal y configura tu nombre de usuario y correo electrónico con los comandos:<br>
+                <code>git config --global user.name "Tu Nombre"</code><br>
+                <code>git config --global user.email "tuemail@example.com"</code>
             </p>
         </section>
         <section>
-            <h2>5. Configurar la Base de Datos (si es necesario)</h2>
+            <h2>5. Inicializar el Repositorio Local</h2>
             <p>
-                <strong>Crear una Base de Datos:</strong> Si tu sitio web utiliza una base de datos (por ejemplo, un sitio WordPress), crea una base de datos desde el panel de control.<br>
-                <strong>Subir y Configurar la Base de Datos:</strong> Usa phpMyAdmin (u otra herramienta) para importar la base de datos si ya tienes una. Configura el archivo de configuración de tu sitio web para que apunte a la nueva base de datos.
+                <strong>Crear Carpeta:</strong> Crea una carpeta en tu computadora para tu proyecto.<br>
+                <strong>Inicializar Git:</strong> Abre la terminal, navega a la carpeta de tu proyecto y ejecuta <code>git init</code> para inicializar un nuevo repositorio Git.
             </p>
         </section>
         <section>
-            <h2>6. Configurar el Dominio</h2>
+            <h2>6. Añadir Archivos y Realizar el Primer Commit</h2>
             <p>
-                <strong>Actualizar DNS:</strong> Si compraste tu dominio por separado, tendrás que actualizar los servidores DNS del dominio para que apunten a tu proveedor de hosting.<br>
-                <strong>Comprobar Propagación DNS:</strong> La actualización de DNS puede tardar hasta 48 horas en propagarse completamente.
+                <strong>Añadir Archivos:</strong> Añade los archivos de tu sitio web a la carpeta del proyecto.<br>
+                <strong>Comandos Git:</strong> En la terminal, usa los comandos:<br>
+                <code>git add .</code><br>
+                <code>git commit -m "Primer commit"</code>
             </p>
         </section>
         <section>
-            <h2>7. Probar tu Sitio Web</h2>
+            <h2>7. Conectar el Repositorio Local con GitHub</h2>
             <p>
-                <strong>Acceder a tu Dominio:</strong> Una vez que la propagación DNS se haya completado, accede a tu dominio desde un navegador web para comprobar que todo funciona correctamente.<br>
-                <strong>Solucionar Problemas:</strong> Si encuentras algún problema, revisa los permisos de archivos, rutas y configuración de la base de datos.
+                <strong>Copiar URL del Repositorio:</strong> En GitHub, copia la URL del repositorio (algo como <code>https://github.com/tuusuario/turepositorio.git</code>).<br>
+                <strong>Configurar Remoto:</strong> En la terminal, ejecuta:<br>
+                <code>git remote add origin https://github.com/tuusuario/turepositorio.git</code><br>
+                <code>git branch -M main</code><br>
+                <code>git push -u origin main</code>
             </p>
         </section>
         <section>
-            <h2>8. Configurar SSL (Opcional pero Recomendado)</h2>
+            <h2>8. Habilitar GitHub Pages</h2>
             <p>
-                <strong>Obtener un Certificado SSL:</strong> Muchos proveedores de hosting ofrecen certificados SSL gratuitos (por ejemplo, Let's Encrypt).<br>
-                <strong>Instalar SSL:</strong> Instala el certificado SSL desde el panel de control para asegurar que tu sitio web funcione sobre HTTPS.
+                <strong>Configuración de GitHub Pages:</strong> Ve a la configuración del repositorio en GitHub.<br>
+                <strong>Seleccionar Rama:</strong> En la sección "Pages", selecciona la rama "main" como fuente y guarda los cambios.<br>
+                <strong>Acceder al Sitio:</strong> Tu sitio estará disponible en <code>https://tuusuario.github.io/turepositorio</code>.
             </p>
         </section>
         <section>
-            <h2>9. Realizar Ajustes Finales</h2>
+            <h2>9. Actualizar tu Sitio Web</h2>
             <p>
-                <strong>Configurar Redirecciones:</strong> Si es necesario, configura redirecciones (por ejemplo, redirigir HTTP a HTTPS).<br>
-                <strong>Optimizar el Rendimiento:</strong> Usa herramientas y plugins para mejorar la velocidad y el rendimiento de tu sitio web.
+                <strong>Hacer Cambios:</strong> Realiza cambios en los archivos de tu proyecto local.<br>
+                <strong>Subir Cambios:</strong> Usa los comandos:<br>
+                <code>git add .</code><br>
+                <code>git commit -m "Descripción de los cambios"</code><br>
+                <code>git push</code>
             </p>
         </section>
         <section>
-            <h2>10. Mantenimiento Regular</h2>
+            <h2>10. Mantener tu Proyecto</h2>
             <p>
-                <strong>Actualizar Software:</strong> Mantén tu CMS, plugins y temas actualizados para asegurar la seguridad y el buen funcionamiento de tu sitio.<br>
-                <strong>Realizar Copias de Seguridad:</strong> Configura copias de seguridad automáticas para prevenir la pérdida de datos.
+                <strong>Actualizar Regularmente:</strong> Mantén tu sitio web actualizado y realiza commits frecuentes.<br>
+                <strong>Gestionar Issues:</strong> Usa GitHub para gestionar problemas y sugerencias a través de "Issues".
             </p>
         </section>
     </div>
@@ -267,6 +277,7 @@
        
     </section>
 </body>
+
 
 
 
